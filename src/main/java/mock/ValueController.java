@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.IanaLinkRelations;
@@ -32,6 +33,7 @@ class ValueController {
         return "hi, it give mock data.";
     }
 
+    @CrossOrigin(origins = "http://localhost:8081")
     @GetMapping("/values")
     CollectionModel<EntityModel<Value>> all() {
         List<EntityModel<Value>> values = repository.findAll()
