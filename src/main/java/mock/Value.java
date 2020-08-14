@@ -18,7 +18,7 @@ class Value {
 
     Value(long x, Random rd) {
         this.x = x;
-        this.y = rd.nextDouble();
+        this.y = rd.nextDouble() * 1000;
     }
 
     Value(long x, double y) {
