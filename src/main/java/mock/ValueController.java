@@ -33,7 +33,7 @@ class ValueController {
         return "hi, it give mock data.";
     }
 
-    @CrossOrigin(origins = "http://localhost:8081")
+    @CrossOrigin(origins = "https://zzzit.net")
     @GetMapping("/values")
     CollectionModel<EntityModel<Value>> all() {
         List<EntityModel<Value>> values = repository.findAll()

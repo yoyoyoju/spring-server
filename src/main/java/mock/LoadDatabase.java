@@ -21,7 +21,7 @@ class LoadDatabase {
             long unixTime = Instant.now().getEpochSecond();
 
             Random rd = new Random();
-            for (long i=0; i<10; i++) {
+            for (long i=0; i<100; i++) {
                 long x = unixTime - i * dayInSecond;
                 // log.info("time: " + Instant.ofEpochSecond(x));
                 valueRepository.save(new Value(x, rd));
