@@ -30,7 +30,7 @@ class ValueController {
 
     @GetMapping("/")
     String test() {
-        return "hi, it give mock data.";
+        return "hi, this serves mock data.";
     }
 
     @GetMapping("/values")
