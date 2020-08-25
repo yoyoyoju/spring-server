@@ -14,5 +14,23 @@ public class Click {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     public Long id;
+    
+    @Column(name = "name")
+    public String name;
 
+    public Person() {}
+
+    public Person(long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append(String.valueOf(id));
+        builder.append(", ");
+        builder.append(name);
+        return builder.toString();
+    }
 }
