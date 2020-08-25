@@ -18,9 +18,9 @@ public class Click {
     @Column(name = "name")
     public String name;
 
-    public Person() {}
+    public Click() {}
 
-    public Person(long id, String name) {
+    public Click(long id, String name) {
         this.id = id;
         this.name = name;
     }
