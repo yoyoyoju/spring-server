@@ -23,4 +23,15 @@ public class ClicksApiController {
     public List<Click> getAllClicks() {
         return clickService.findAll();
     }
+
+    @PostMapping("")
+    public String addClick(@RequestBody Click click) {
+        if (click != null) {
+            clickService.insert(click);
+            return "Added a click";
+        } else {
+            return "Request does not contain a body";
+        }
+
+    }
 }

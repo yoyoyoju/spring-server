@@ -5,4 +5,5 @@ import mock.data.models.Click;
 
 public interface ClickService {
     List<Click> findAll();
+    Click insert(Click c);
 }

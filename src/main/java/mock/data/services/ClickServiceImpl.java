@@ -21,4 +21,8 @@ public class ClickServiceImpl implements ClickService {
         return (List<Click>) repository.findAll();
     }
 
+    @Override
+    public Click insert(Click c) {
+        return repository.save(c);
+    }
 }
